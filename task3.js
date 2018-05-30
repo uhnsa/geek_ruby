@@ -1,30 +1,17 @@
-import java.util.Scanner;
-
-public class NOD {
-  public static void main(String [] args){
-    Scanner s = new Scanner(System.in);
-    int a=s.nextInt();
-    int b=s.nextInt();
-    int del=0;
-    if(a>b){
-    	int y=b;
-    	while(del==0){
-    		if(a%y==0&&b%y==0){
-    			del=y;
-    		}else{
-    		y--;
-    		}
-    	}
-    }else{
-    	int y=a;
-    	while(del==0){
-    		if(b%y==0&&a%y==0){
-    			del=y;
-    		}else{
-    		y--;
-    		}
-    	}
-    }
-    System.out.println(del);
-  }
+var a=Number(process.argv[2]);
+var b=Number(process.argv[3]);
+var s=0;
+var del=0;
+if(a>b){
+	s=b;
+	}else{
+	s=a;
+	}
+while(del==0){
+	if(a%s==0&&b%s==0){
+		del=s;
+	}else{
+	s--;
+	}
 }
+console.log(s);
