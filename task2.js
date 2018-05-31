@@ -18,7 +18,7 @@ if(str.length==sstr.length){
 		j=j+1;
 		if(count>=str.length){
 			process.stdout.write("-1");
-			return 0;
+			return;
 		}
 	}
 }else{
