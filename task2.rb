@@ -4,15 +4,15 @@ p=str.length
 a=Array.new(p).map!{Array.new(p)}
 while i<p
     j=0
-   while j<p
-       if(str[i]==str[j])
-           a[i][j]=1
-        else
+    while j<p
+        if(str[i]==str[j]) #строю двумерный массив
+            a[i][j]=1
+            else
             a[i][j]=0
         end
-       j=j+1
+        j=j+1
     end
-   i=i+1
+    i=i+1
 end
 n=0
 maxl=0
@@ -21,10 +21,9 @@ i=0
 while i<p
     j=i+1
     n=i
-    m=j
     while j<p
-        
-        while(a[n][m]==1)
+        m=j
+        while(a[n][m]==1) #из=щу длину максимальной подстроки
             l=l+1
             n=n+1
             m=m+1
@@ -32,8 +31,8 @@ while i<p
         if(l>maxl)
             maxl=l
         end
+        n=i
         l=0
-        m=m+1
         j=j+1
     end
     i=i+1
@@ -42,24 +41,24 @@ nstr=""
 i=0
 count=0
 while i<p
-   j=i+1
-   n=i
-   m=j
-   while j<p
-       while a[n][m]!=0
-           nstr=nstr+str[m]
-           n=n+1
-           m=m+1
-           count=count+1
+    j=i+1
+    n=i
+    while j<p
+        m=j
+        while a[n][m]==1
+            nstr=nstr+str[m]
+            n=n+1
+            m=m+1
+            count=count+1
         end
-       if(count!=maxl)
-           nstr=""
-           count=0
-        else
+        if(count!=maxl)
+            nstr=""
+            count=0
+            else
             puts nstr
             return
         end
-       m=m+1
-       j=j+1
+        n=i
+        j=j+1
     end
 end
