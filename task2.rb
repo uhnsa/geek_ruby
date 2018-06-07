@@ -5,7 +5,7 @@ a=Array.new(p).map!{Array.new(p)}
 while i<p
     j=0
     while j<p
-        if(str[i]==str[j]) #строю двумерный массив
+        if(str[i]==str[j])
             a[i][j]=1
             else
             a[i][j]=0
@@ -23,7 +23,7 @@ while i<p
     n=i
     while j<p
         m=j
-        while(a[n][m]==1) #из=щу длину максимальной подстроки
+        while(a[n][m]==1)
             l=l+1
             n=n+1
             m=m+1
