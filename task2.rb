@@ -53,12 +53,12 @@ end
 nstr=""
 i=0
 count=0
-while i<p
+while i<p&&count!=maxl
     j=i+1
     n=i
-    while j<p
+    while j<p&&count!=maxl
         m=j
-        while a[n][m]==1 #строю подстроку, зная только длину
+        while a[n][m]==1&& #строю подстроку, зная только длину
             nstr=nstr+str[m]
             n=n+1
             m=m+1
@@ -69,7 +69,6 @@ while i<p
             count=0
             else
             puts nstr
-            return
         end
         n=i
         j=j+1
