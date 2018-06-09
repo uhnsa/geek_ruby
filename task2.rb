@@ -73,4 +73,5 @@ while i<p&&count!=maxl
         n=i
         j=j+1
     end
+    i=i+1
 end
