@@ -3,7 +3,7 @@ i=0
 p=str.length
 a=Array.new(p).map!{Array.new(p)}
 while i<p
-    j=0
+    j=i+1
     while j<p
         if(str[i]==str[j]) #строю двумерный массив
             a[i][j]=1
