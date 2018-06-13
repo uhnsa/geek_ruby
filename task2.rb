@@ -53,30 +53,25 @@ end
 nstr=""
 i=0
 count=0
-if maxl==0
-    nstr=str[0]
-    puts nstr
-else
-    while i<p&&count!=maxl
-        j=i+1
-        n=i
-        while j<p&&count!=maxl
-            m=j
-            while a[n][m]==1&& #строю подстроку, зная только длину
-                nstr=nstr+str[m]
-                n=n+1
-                m=m+1
-                count=count+1
-            end
-            if(count!=maxl)
-                nstr=""
-                count=0
-                else
-                puts nstr
-            end
-            n=i
-            j=j+1
+while i<p&&count!=maxl
+    j=i+1
+    n=i
+    while j<p&&count!=maxl
+        m=j
+        while a[n][m]==1&& #строю подстроку, зная только длину
+            nstr=nstr+str[m]
+            n=n+1
+            m=m+1
+            count=count+1
         end
-        i=i+1
+        if(count!=maxl)
+            nstr=""
+            count=0
+            else
+            puts nstr
+        end
+        n=i
+        j=j+1
     end
+    i=i+1
 end
