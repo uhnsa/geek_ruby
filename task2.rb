@@ -2,17 +2,15 @@ str=ARGV[0]
 i=0
 p=str.length
 a=Array.new(p).map!{Array.new(p)}
-while i<p
+for i in 0 ... p
     j=i+1
-    while j<p
+    for j in i+1 ... p
         if(str[i]==str[j]) #строю двумерный массив
             a[i][j]=1
             else
             a[i][j]=0
         end
-        j=j+1
     end
-    i=i+1
 end
 =begin
 i=0
@@ -30,10 +28,9 @@ n=0
 maxl=0
 l=0
 i=0
-while i<p
-    j=i+1
+for i in 0 ... p
     n=i
-    while j<p
+    for j in i+1 ... p
         m=j
         while(a[n][m]==1) #из=щу длину максимальной подстроки
             l=l+1
@@ -45,9 +42,7 @@ while i<p
         end
         n=i
         l=0
-        j=j+1
     end
-    i=i+1
 end
 #puts maxl
 nstr=""
